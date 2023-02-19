@@ -40,7 +40,7 @@ const usuarioSchema = new mongoose.Schema(
     },
     {
         timestamps: true,
-        versionKey: false,
+        versionKey: false,  
     }
 );
 
