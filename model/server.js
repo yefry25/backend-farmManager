@@ -8,8 +8,8 @@ class Server {
         
         this.app= express(); /* este expresión va de primeras para que nos pueda declarar la app de express */
         this.middleware(); /* este middleware se coloca de segundo, para lograr que las rutas sean verificadas*/
-        this.conectarBd();
         this.port=process.env.PORT || '8080';
+        this.conectarBd();
         this.routes();
     }
  
