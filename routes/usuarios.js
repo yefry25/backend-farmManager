@@ -6,13 +6,13 @@ import validarCampos from "../middleware/middleware.js"
 const router = new Router()
 
 router.post('/agregar',[
-    /* check('documento','No puede estar vacio').not().isEmpty(),
+    check('documento','No puede estar vacio').not().isEmpty(),
     check('nombre','No puede estar vacio').not().isEmpty(),
     check('telefono','No puede estar vacio').not().isEmpty(),
     check('correo','No puede estar vacio').not().isEmpty(),
     check('correo','Debe tener formato correo').isEmail(),
     check('rol','No puede estar vacio').not().isEmpty(),
-    validarCampos */
+    validarCampos
 ],user.usuarioPost)
 
 export default router
