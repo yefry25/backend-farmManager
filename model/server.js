@@ -5,13 +5,14 @@ import usuario from "../routes/usuarios.js"
 
 class Server {
     constructor (){
-        this.app= express();
+        
+        this.app= express(); /* este expresión va de primeras para que nos pueda declarar la app de express */
+        this.middleware(); /* este middleware se coloca de segundo, para lograr que las rutas sean verificadas*/
         this.conectarBd();
-        this.routes();
         this.port=process.env.PORT || '8080';
-        this.middleware();
+        this.routes();
     }
-
+ 
     routes(){
         this.app.use('/api/usuario',usuario)
     }
