@@ -8,7 +8,7 @@ const user = {
             let pass = documento
 
             const usuario = new Usuario({ documento, nombre, telefono, correo, password: pass, rol });
-            console.log(usuario);
+            
             try {
                 const salt = bcryptjs.genSaltSync(10);
                 usuario.password = bcryptjs.hashSync(pass, salt);
@@ -20,6 +20,7 @@ const user = {
                 return res.status(400).json({ msg: "no se pudo registrar el cliente" });
             }
             usuario.save();
+            res.json({usuario})
         } catch (error) {
             return res.status(500).json({msg:"Hable con el WebMaster"})
         }
