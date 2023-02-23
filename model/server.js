@@ -2,6 +2,9 @@ import express from "express";
 import cors from "cors";
 import dbConnection from "../database/config.js";
 import usuario from "../routes/usuarios.js"
+import cafe from "../routes/cafe.js"
+import tipoProducto from "../routes/tipoProducto.js"
+import lote from "../routes/lote.js"
 
 class Server {
     constructor (){
@@ -14,7 +17,10 @@ class Server {
     }
  
     routes(){
-        this.app.use('/api/usuario',usuario)
+        this.app.use('/api/usuario',usuario);
+        this.app.use('/api/lote',cafe);
+        this.app.use('/api/tipo',tipoProducto);
+        this.app.use('/api/lote',lote)
     }
 
     async conectarBd(){

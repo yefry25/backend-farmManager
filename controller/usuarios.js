@@ -35,7 +35,7 @@ const user = {
             const usuario = await Usuario.findOne({ correo });
             if (!usuario) {
                 return res.status(400).json({
-                    msg: "Usuario / Password no son correctos",
+                    msg: "Usuario / Password no son correctos", 
                 });
             }
             if (usuario.estado == 0) {
@@ -59,7 +59,6 @@ const user = {
             }
             
             const navegador = req.headers['user-agent']
-            /* const ip = req.socket.remoteAddress */
             const ipAdd = ip.address();
             console.log("token: "+token);
             /* try {

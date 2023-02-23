@@ -33,6 +33,10 @@ const usuarioSchema = new mongoose.Schema(
             required:true,
             default:1
         },
+        jornal:{
+            type:mongoose.Schema.ObjectId,
+            ref:'Jornal'
+        },
         resetToken:{
             type:String,
             default:''
