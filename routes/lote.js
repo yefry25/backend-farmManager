@@ -7,8 +7,10 @@ import validar from "../middleware/validar.js";
 const router = new Router();
 
 router.post('/',[
-    check('tipo','El campo tipo de cultivo no puede estar vacio').not().isEmpty(), 
-    check('edad','El campo edad del cultivo no puede estar vacio').not().isEmpty(), 
+    check('tipo','El campo tipo de cultivo no puede estar vacio').not().isEmpty(),
+    check('tipo','El campo tipo de producto debe ser mongoId').isMongoId(),
+    check('edad','El campo edad del cultivo no puede estar vacio').not().isEmpty(),
+    check('edad','El campo edad del producto debe ser numérico').isNumeric(),
     check('abono','El campo abono no puede estar vacio').not().isEmpty(), 
     check('jornales','El campo jornales no puede estar vacio').not().isEmpty(), 
     validarCampos

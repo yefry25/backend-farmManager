@@ -6,10 +6,10 @@ import validar from "../middleware/validar.js";
 const user = {
     usuarioPost: async (req, res) => {
         try {
-            const { documento, nombre, telefono, correo, rol } = req.body;
+            const { documento, nombre, telefono, correo, rol,jornal } = req.body;
             let pass = documento
 
-            const usuario = new Usuario({ documento, nombre, telefono, correo, password: pass, rol });
+            const usuario = new Usuario({ documento, nombre, telefono, correo, password: pass, rol,jornal });
 
             try {
                 const salt = bcryptjs.genSaltSync(10);

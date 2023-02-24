@@ -5,6 +5,9 @@ import usuario from "../routes/usuarios.js"
 import cafe from "../routes/cafe.js"
 import tipoProducto from "../routes/tipoProducto.js"
 import lote from "../routes/lote.js"
+import jornal from "../routes/jornal.js"
+import animal from "../routes/animal.js"
+import hogar from "../routes/hogar.js"
 
 class Server {
     constructor (){
@@ -18,9 +21,12 @@ class Server {
  
     routes(){
         this.app.use('/api/usuario',usuario);
-        this.app.use('/api/lote',cafe);
+        this.app.use('/api/cafe',cafe);
         this.app.use('/api/tipo',tipoProducto);
-        this.app.use('/api/lote',lote)
+        this.app.use('/api/lote',lote);
+        this.app.use('/api/jornal',jornal);
+        this.app.use('/api/animal',animal);
+        this.app.use('/api/hogar',hogar);
     }
 
     async conectarBd(){

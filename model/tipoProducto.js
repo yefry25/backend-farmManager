@@ -4,7 +4,7 @@ const tipoSchema = new mongoose.Schema(
     {
         cafe:{
             type:mongoose.Schema.Types.ObjectId,
-            ref:'Coffe'
+            ref:'Coffee'
         },
         maiz:{
             type:mongoose.Schema.Types.ObjectId,

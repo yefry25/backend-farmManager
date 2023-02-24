@@ -19,6 +19,9 @@ const loteSchema = new mongoose.Schema(
             },
             organico:{  
                 type:Number
+            },
+            costo:{
+                type:Number
             }
         },
         jornales:{
@@ -34,7 +37,6 @@ const loteSchema = new mongoose.Schema(
                 type:Number
             }
         },
-        
     },
     {
         timestamps: true,

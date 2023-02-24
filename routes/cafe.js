@@ -7,11 +7,13 @@ const router = new Router();
  
 router.post('/',[
     check('conteo','El campo conteo no puede estar vacio').not().isEmpty(),
+    check('conteo','El campo conteo debe ser numérico').isNumeric(),
     check('cereza','El campo cereza no puede estar vacio').not().isEmpty(),
+    check('cereza','El campo cereza debe ser numérico').isNumeric(),
     check('seco','El campo seco no puede estar vacio').not().isEmpty(),
+    check('seco','El campo seco debe ser numérico').isNumeric(),
     check('costoSemillero','El campo costo del semillero no puede estar vacio').not().isEmpty(),
-    check('costoSembrada','El campo costo de la sembrada no puede estar vacio').not().isEmpty(),
-    check('costoAbonoLevante','El campo costo del abono levante no puede estar vacio').not().isEmpty(),
+    check('costoSemillero','El campo costo del semillero debe ser numérico').isNumeric(),
     validarCampos
 ],lote.ingresarCafe)
   

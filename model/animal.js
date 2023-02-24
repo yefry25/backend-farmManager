@@ -6,10 +6,16 @@ const animalSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-        costoTotalMedicamento: {
+        kilos:{
+            type:Number
+        },
+        conteo:{
+            type: Number
+        },
+        costoMedicamento: {
             type: Number,
         },
-        costoTotalComida: {
+        costoComida: {
             type: Number,
         },
         costoTotal: {

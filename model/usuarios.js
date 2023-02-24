@@ -34,7 +34,7 @@ const usuarioSchema = new mongoose.Schema(
             default:1
         },
         jornal:{
-            type:mongoose.Schema.ObjectId,
+            type:mongoose.Schema.Types.ObjectId,
             ref:'Jornal'
         },
         resetToken:{
