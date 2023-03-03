@@ -16,4 +16,5 @@ router.post('/',[
     validarCampos
 ],lote.crearLote)
 
+router.get('/verLotes',lote.verLote)
 export default router

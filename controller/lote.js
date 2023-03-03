@@ -31,7 +31,20 @@ const lote = {
         } catch (error) {
             return res.status(500).json({ msg: "Hable con el WebMaster" })
         }
-    }
+    },
+    verLote: async (req, res) => {
+        try {
+            const lote = await Lote.find()
+            .populate({path:'jornales.obrero',populate:{path:'jornal'}})
+            .populate({path:'tipo', populate:{path:'cafe'}});
+            if(!lote){
+                return res.status(400).json({ msg: "No se encontraron lotes"})
+            }
+            res.json({lote})
+        } catch (error) {
+            return res.status(500).json({msg:"Hable con el WebMaster"})
+        }
+    },
 }
 
 export default lote
